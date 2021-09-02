@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Archive</title>
+    <!-- Linking Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Input Container -->
+      <section class="my-5 d-flex">
+        <input type="text" id="search-input" class="w-75 p-2" />
+        <button
+          id="search-btn"
+          onclick="searchInfo()"
+          class="btn btn-primary mx-3 w-25"
+        >
+          Search
+        </button>
+      </section>
+      <div
+        id="spinner"
+        class="d-flex align-items-center justify-center"
+        style="visibility: hidden"
+      >
+        <!-- Loading Spinner -->
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <!-- Output display -->
+      <h2 class="text-center" id="books-found"></h2>
+      <section id="search-results" class="row g-2 row-cols-3"></section>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
+</html>

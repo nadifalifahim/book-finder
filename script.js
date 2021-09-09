@@ -98,6 +98,14 @@ const displayData = (data) => {
   }
 };
 
+const clearSearch = () => {
+    const searchResults = document.getElementById("search-results");
+    searchResults.innerHTML = "";
+    document.getElementById(
+      "books-found"
+    ).innerHTML = `Books Found: <span id="total-results-num">0</span>`;
+}
+
 // Displaying Error
 const displayError = () => {
   toggleLoader("hidden");

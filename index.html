@@ -16,8 +16,8 @@
   <body>
     <div class="container">
       <!-- Input Container -->
-      <section class="my-5 d-flex">
-        <input type="text" id="search-input" class="w-75 p-2" />
+      <section class="mt-5 mb-3 d-flex">
+        <input type="text" id="search-input" class="w-100 p-2" />
         <button
           id="search-btn"
           onclick="searchInfo()"
@@ -25,19 +25,20 @@
         >
           Search
         </button>
+        <button onclick="clearSearch()" class="btn btn-outline-secondary w-25">
+          Clear
+        </button>
       </section>
-      <div
-        id="spinner"
-        class="d-flex align-items-center justify-center"
-        style="visibility: hidden"
-      >
-        <!-- Loading Spinner -->
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+      <!-- Loading Spinner -->
+      <div class="d-flex align-items-end justify-center">
+        <div id="spinner" style="visibility: hidden">
+          <div class="spinner-border text-primary text-center" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </div>
       <!-- Output display -->
-      <h2 class="text-center" id="books-found"></h2>
+      <h2 class="text-center my-5" id="books-found"></h2>
       <section id="search-results" class="row g-2 row-cols-3"></section>
     </div>
   </body>
